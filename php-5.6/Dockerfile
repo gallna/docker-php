@@ -14,6 +14,4 @@ ADD php.ini /etc/php5/fpm/php.ini
 # Copy modules configuration
 ADD mods-available/xdebug.ini /etc/php5/mods-available/xdebug.ini
 
-CMD ["php5-fpm"]
-
-EXPOSE 9000
+CMD ["php"]
