@@ -13,4 +13,6 @@ RUN export LANG=C.UTF-8 \
 RUN ln -sf /dev/stdout /var/log/access.log \
  && ln -sf /dev/stderr /var/log/php-fpm.log
 
-CMD ["php"]
+CMD ["php-fpm"]
+
+EXPOSE 9000
