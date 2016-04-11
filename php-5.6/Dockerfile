@@ -14,10 +14,9 @@ RUN export LANG=C.UTF-8 \
 ADD php.ini /etc/php5/fpm/php.ini
 ADD php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
-# Copy modules configuration
-ADD mods-available/xdebug.ini /etc/php5/mods-available/xdebug.ini
-
 RUN ln -sf /dev/stdout /var/log/access.log \
  && ln -sf /dev/stderr /var/log/php-fpm.log
 
-CMD ["php"]
+CMD ["php5-fpm"]
+
+EXPOSE 9000
