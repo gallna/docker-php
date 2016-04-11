@@ -12,7 +12,6 @@ RUN export LANG=C.UTF-8 \
 
 # Copy configuration files
 ADD php.ini /etc/php5/fpm/php.ini
-ADD php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 RUN ln -sf /dev/stdout /var/log/access.log \
  && ln -sf /dev/stderr /var/log/php-fpm.log
