@@ -12,7 +12,6 @@ RUN export LANG=C.UTF-8 \
 
 # Copy configuration files
 ADD php.ini /etc/php5/fpm/php.ini
-ADD php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 # Copy modules configuration
 ADD mods-available/xdebug.ini /etc/php5/mods-available/xdebug.ini
