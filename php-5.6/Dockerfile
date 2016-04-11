@@ -5,7 +5,7 @@ MAINTAINER Tomasz Jonik <tomasz@hurricane.works>
 RUN export LANG=C.UTF-8 \
     && add-apt-repository ppa:ondrej/php \
     && apt-get update \
-    && apt-get install -y php5.6 php5-redis php5-intl \
+    && apt-get install -y php5.6-fpm php5-redis php5-intl \
     && php5enmod redis intl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
