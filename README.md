@@ -16,3 +16,11 @@ Branch structure php implementation
 - master: **php**
 - php-fpm: **php-fpm**
 - php-amqp: **php7-fpm** with **amqp module**
+
+
+gallna/docker-php:php5.6
+gallna/docker-php:php5.6-fpm
+
+gallna/docker-php:php7
+gallna/docker-php:php7-fpm
+gallna/docker-php:php7-amqp
