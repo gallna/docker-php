@@ -13,6 +13,7 @@ RUN export LANG=C.UTF-8 \
 
 # Copy configuration files
 ADD php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
+ADD php.ini /etc/php/7.0/fpm/php.ini
 ADD pool.d /etc/php/7.0/fpm/pool.d/
 
 RUN ln -sf /dev/stdout /var/log/access.log \
