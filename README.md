@@ -17,8 +17,8 @@ Branch structure php implementation
 - php-fpm: **php-fpm**
 
 
-gallna/php:php5.6
-gallna/php:php5.6-fpm
+gallna/php.official:php5.6
+gallna/php.official:php5.6-fpm
 
-gallna/php:php7
-gallna/php:php7-fpm
+gallna/php.official:php7
+gallna/php.official:php7-fpm
