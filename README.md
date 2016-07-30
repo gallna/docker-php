@@ -13,8 +13,8 @@ Folder structure represents php version:
 
 Branch structure php implementation
 
-- master: **php**
-- php-fpm: **php-fpm**
+- official/php: **php**
+- official/php-fpm: **php-fpm**
 
 
 gallna/php.official:php5.6

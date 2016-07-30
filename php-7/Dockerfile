@@ -70,5 +70,3 @@ RUN sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" /usr/local/etc/php-fpm.c
 RUN echo "xdebug.var_display_max_depth = 5" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.var_display_max_children = 256" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.var_display_max_data = 1024" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
-RUN echo "amqp.timeout = 10" >> /usr/local/etc/php/conf.d/docker-php-ext-amqp.ini
