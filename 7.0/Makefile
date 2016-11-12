@@ -1,28 +1,24 @@
 SHELL = /bin/bash
 NS = gallna
-NAME = php7.fpm
+NAME = php-fpm
 VERSION ?= latest
 GIT_TAG=$(shell git describe --tags)
 
-.PHONY : test build push login
-.DEFAULT_GOAL := test
-
-### docker ###
-release: build push
-
-test: docker-build
+.PHONY : build push release
+.DEFAULT_GOAL := build
 
 build: php-ini docker-build
 
-push: docker-push
-
+### docker ###
 docker-build:
 	docker build -t $(NS)/$(NAME):$(VERSION) .
 	@[ -z "$(GIT_TAG)" ]; docker tag $(NS)/$(NAME):$(VERSION) $(NS)/$(NAME):$(GIT_TAG); echo "$(NS)/$(NAME):$(GIT_TAG)";
 
-docker-push:
+push:
 	docker push $(NS)/$(NAME):$(VERSION)
 	@[ -z "$(GIT_TAG)" ] || docker push $(NS)/$(NAME):$(GIT_TAG)
+
+release: build push
 
 # Downloads latest php.ini from php git repository
 php-ini:
